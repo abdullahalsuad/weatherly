@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-// import { CitySearch } from "./city-search";
 import { ThemeToggle } from "./ThemeToggle";
 import { useTheme } from "@/context/theme-provider";
+import { CitySearch } from "./city-search";
 
 export function Header() {
   const { theme } = useTheme();
@@ -17,12 +17,12 @@ export function Header() {
                 : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"
             } bg-clip-text text-transparent`}
           >
-            Weathrly
+            Weatherly
           </span>
         </Link>
 
         <div className="flex gap-4">
-          {/* <CitySearch /> */}
+          <CitySearch />
           <ThemeToggle />
         </div>
       </div>
